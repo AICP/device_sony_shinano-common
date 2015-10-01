@@ -28,6 +28,9 @@ on early-init
     # Turn off backlight on blank
     write /sys/class/leds/lcd-backlight/trigger "backlight"
 
+    # Turn off backlight on blank
+    write /sys/class/leds/lcd-backlight/trigger "backlight"
+
 on init
     symlink /dev/block/platform/msm_sdcc.1 /dev/block/bootdevice
 
