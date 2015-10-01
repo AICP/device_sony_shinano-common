@@ -25,6 +25,9 @@ on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
     chown system system /sys/kernel/debug/kgsl/proc
 
+    # Turn off backlight on blank
+    write /sys/class/leds/lcd-backlight/trigger "backlight"
+
 on init
     symlink /dev/block/platform/msm_sdcc.1 /dev/block/bootdevice
 
