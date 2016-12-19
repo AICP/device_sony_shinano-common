@@ -22,3 +22,6 @@ TARGET_KERNEL_SOURCE := kernel/sony/msm
 # Display HAL
 SONY_AOSP_DISPLAY := true
 $(call project-set-path,qcom-display,hardware/sony/display/msm8994)
+
+# Nfc
+BOARD_NFC_CHIPSET := pn547
