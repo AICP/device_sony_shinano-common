@@ -18,3 +18,7 @@ BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 # Kernel
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/sony/msm
+
+# Display HAL
+SONY_AOSP_DISPLAY := true
+$(call project-set-path,qcom-display,hardware/sony/display/msm8994)
