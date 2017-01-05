@@ -1,5 +1,11 @@
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(TARGET_VENDOR_DEVICE_NAME),)
+LOCAL_TARGET_DEVICE := $(TARGET_DEVICE)
+else
+LOCAL_TARGET_DEVICE := $(TARGET_VENDOR_DEVICE_NAME)
+endif
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := fstab.shinano
 LOCAL_SRC_FILES := fstab.shinano
@@ -10,10 +16,10 @@ LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := init.$(TARGET_DEVICE)
+LOCAL_MODULE := init.$(LOCAL_TARGET_DEVICE)
 LOCAL_SRC_FILES := init.shinano.rc
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_STEM := init.$(TARGET_DEVICE)
+LOCAL_MODULE_STEM := init.$(LOCAL_TARGET_DEVICE)
 LOCAL_MODULE_SUFFIX := .rc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
@@ -30,24 +36,25 @@ LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := init.recovery.$(TARGET_DEVICE)
+LOCAL_MODULE := init.recovery.$(LOCAL_TARGET_DEVICE)
 LOCAL_SRC_FILES := init.recovery.shinano.rc
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_STEM := init.recovery.$(TARGET_DEVICE)
+LOCAL_MODULE_STEM := init.recovery.$(LOCAL_TARGET_DEVICE)
 LOCAL_MODULE_SUFFIX := .rc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := ueventd.$(TARGET_DEVICE)
+LOCAL_MODULE := ueventd.$(LOCAL_TARGET_DEVICE)
 LOCAL_SRC_FILES := ueventd.shinano.rc
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_STEM := ueventd.$(TARGET_DEVICE)
+LOCAL_MODULE_STEM := ueventd.$(LOCAL_TARGET_DEVICE)
 LOCAL_MODULE_SUFFIX := .rc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
-$(shell mkdir -p $(PRODUCT_OUT)/root && pushd $(PRODUCT_OUT)/root > /dev/null && ln -s fstab.shinano fstab.$(TARGET_DEVICE) && popd > /dev/null)
+$(shell mkdir -p $(PRODUCT_OUT)/root && pushd $(PRODUCT_OUT)/root > /dev/null && ln -s fstab.shinano fstab.$(LOCAL_TARGET_DEVICE) && popd > /dev/null)
 
+LOCAL_TARGET_DEVICE :=
