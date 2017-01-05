@@ -51,3 +51,11 @@ include $(BUILD_PREBUILT)
 
 $(shell mkdir -p $(PRODUCT_OUT)/root && pushd $(PRODUCT_OUT)/root > /dev/null && ln -s fstab.shinano fstab.$(TARGET_DEVICE) && popd > /dev/null)
 
+ifneq ($(TARGET_VENDOR_DEVICE_NAME),)
+    $(shell mkdir -p $(PRODUCT_OUT)/root && pushd $(PRODUCT_OUT)/root > /dev/null && \
+           ln -s fstab.$(TARGET_DEVICE) fstab.$(TARGET_VENDOR_DEVICE_NAME) && \
+           ln -s init.$(TARGET_DEVICE).rc init.$(TARGET_VENDOR_DEVICE_NAME).rc && \
+           ln -s init.recovery.$(TARGET_DEVICE).rc init.recovery.$(TARGET_VENDOR_DEVICE_NAME).rc && \
+           ln -s ueventd.$(TARGET_DEVICE).rc ueventd.$(TARGET_VENDOR_DEVICE_NAME).rc && \
+           popd > /dev/null)
+endif
