@@ -18,5 +18,10 @@
     "repository":   "SatyrBen/vendor-nxp",
     "target_path":  "vendor/nxp",
     "branch":       "android-6.0.1"
+  },
+  {
+    "repository":   "TheMuppets/proprietary_vendor_qcom_binaries",
+    "target_path":  "vendor/qcom/binaries",
+    "branch":       "cm-14.1"
   }
 ]

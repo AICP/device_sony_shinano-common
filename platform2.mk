@@ -30,3 +30,7 @@ PRODUCT_PACKAGES += \
 # Sensors config
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/sec_config:system/etc/sec_config
+
+# Blur
+PRODUCT_COPY_FILES += \
+    vendor/qcom/binaries/msm8974/graphics/proprietary/vendor/lib/libuiblur.so:system/vendor/lib/libuiblur.so
