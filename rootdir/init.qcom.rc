@@ -400,6 +400,11 @@ on post-fs-data
 
     start wvkbd_installer
 
+    # Create the directories used by the Wireless subsystem
+    mkdir /data/vendor/wifi 0771 wifi wifi
+    mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
+
 on property:bluetooth.isEnabled=true
 #    start btwlancoex
     write /sys/class/bluetooth/hci0/idle_timeout 7000
