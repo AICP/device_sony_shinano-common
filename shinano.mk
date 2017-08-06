@@ -25,7 +25,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
@@ -96,16 +95,6 @@ PRODUCT_PACKAGES += \
    FMRadio \
    brcm-uim-sysfs \
    libfmradio.v4l2-fm
-
-# GPS
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/gps/flp.conf:system/etc/flp.conf \
-    $(COMMON_PATH)/gps/gps.conf:system/etc/gps.conf \
-    $(COMMON_PATH)/gps/izat.conf:system/etc/izat.conf \
-    $(COMMON_PATH)/gps/sap.conf:system/etc/sap.conf
-
-PRODUCT_PACKAGES += \
-    gps.msm8974
 
 # IPC Security Config
 PRODUCT_COPY_FILES += \
