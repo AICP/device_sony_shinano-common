@@ -539,5 +539,4 @@ service mpdecision /system/bin/mpdecision --avg_comp
  service uim /system/bin/brcm-uim-sysfs
     class late_start
     user root
-    group bluetooth net_bt
-    seclabel u:r:uim:s0
+    group bluetooth net_bt_admin net_bt
