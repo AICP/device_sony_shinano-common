@@ -497,7 +497,6 @@ service adsprpcd /system/bin/adsprpcd
 
 service charger /charger
     class charger
-    seclabel u:r:healthd:s0
 
 service audiod /system/bin/audiod
     class late_start
