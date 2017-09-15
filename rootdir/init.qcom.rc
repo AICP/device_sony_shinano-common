@@ -383,15 +383,9 @@ on property:bluetooth.isEnabled=true
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main
-<<<<<<< HEAD
-    user root
-    group radio audio bluetooth gps nfc diag wakelock qcom_diag
-
-=======
     user radio
     group radio audio bluetooth gps nfc diag wakelock
     
->>>>>>> 4d74f32... shinano: init: Update path owners to avoid qcom owners
 # Wi-Fi and BT MAC addresses
 service macaddrsetup /system/bin/macaddrsetup /sys/devices/platform/bcmdhd_wlan/macaddr
     class late_start
