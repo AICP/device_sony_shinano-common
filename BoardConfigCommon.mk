@@ -67,7 +67,7 @@ BOARD_BRCM_HCI_NUM := 26
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # CM Hardware
-BOARD_HARDWARE_CLASS += device/sony/shinano-common/cmhw
+BOARD_HARDWARE_CLASS += device/sony/shinano-common/lineagehw
 
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
