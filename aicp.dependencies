@@ -8,5 +8,10 @@
     "repository": "AICP/kernel_sony_msm8974",
     "target_path": "kernel/sony/msm8974",
     "branch": "o8.1"
+  },
+  {
+    "repository": "omnirom/android_hardware_broadcom_fm",
+    "target_path": "hardware/broadcom/fm",
+    "branch": "android-8.1"
   }
 ]
