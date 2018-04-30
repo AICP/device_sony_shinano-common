@@ -86,17 +86,6 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 BOARD_SEPOLICY_DIRS += \
     device/sony/shinano-common/sepolicy
 
-# Shims
-TARGET_LD_SHIM_LIBS := \
-    /system/vendor/bin/credmgrd|/system/vendor/lib/libshims_signal.so \
-    /system/vendor/bin/iddd|/system/vendor/lib/libshims_idd.so \
-    /system/vendor/bin/suntrold|/system/vendor/lib/libshims_signal.so \
-    /system/lib/hw/camera.vendor.qcom.so|/system/vendor/lib/libsonycamera.so \
-    /system/vendor/bin/mm-qcamera-daemon|libandroid.so \
-    /system/lib/libcammw.so|libsensor.so \
-    /system/lib/libsomc_chokoballpal.so|/system/vendor/lib/libGraphicBuffer.so \
-    /system/lib/hw/camera.vendor.qcom.so|libsensor.so
-
 # Props for hotplugging
 TARGET_SYSTEM_PROP += device/sony/shinano-common/system.prop
 
@@ -122,6 +111,18 @@ BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_DEVICE := /dev/pn547
 BOARD_NFC_HAL_SUFFIX := pn54x.default
 NXP_CHIP_TYPE := 1
+
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/vendor/bin/credmgrd|/system/vendor/lib/libshims_signal.so \
+    /system/vendor/bin/iddd|/system/vendor/lib/libshims_idd.so \
+    /system/vendor/bin/suntrold|/system/vendor/lib/libshims_signal.so \
+    /system/lib/hw/camera.vendor.qcom.so|/system/vendor/lib/libsonycamera.so \
+    /system/vendor/bin/mm-qcamera-daemon|libandroid.so \
+    /system/lib/libcammw.so|libsensor.so \
+    /system/lib/libsomc_chokoballpal.so|/system/vendor/lib/libshim_camera.so \
+    /system/lib/libcald_pal.so|/system/vendor/lib/libshim_cald.so \
+    /system/lib/hw/camera.vendor.qcom.so|libsensor.so
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
