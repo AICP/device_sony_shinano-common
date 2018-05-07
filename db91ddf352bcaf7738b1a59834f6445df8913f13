@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06c62ad9_e4d06cf5",
+        "filename": "shinano.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 562
+      },
+      "writtenOn": "2018-05-07T16:40:13Z",
+      "side": 1,
+      "message": "It\u0027s not in /system/etc/\nWe have to put it to /vendor/etc/\n\nSee here.\nhttps://github.com/AICP/frameworks_av/blob/o8.1/media/libmedia/include/media/MediaProfiles.h#L100",
+      "revId": "db91ddf352bcaf7738b1a59834f6445df8913f13",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
