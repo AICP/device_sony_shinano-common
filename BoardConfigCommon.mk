@@ -77,9 +77,6 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # GPS
 TARGET_PROVIDES_GPS_LOC_API := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_shinano
-
 # Keystore
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
