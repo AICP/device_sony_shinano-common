@@ -79,19 +79,6 @@
                    channels="2" />
         </EncoderProfile>
 
-        <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="42000000"
-                   width="3840"
-                   height="2160"
-                   frameRate="30" />
-
-            <Audio codec="aac"
-                   bitRate="156000"
-                   sampleRate="48000"
-                   channels="2" />
-        </EncoderProfile>
-
         <EncoderProfile quality="timelapseqcif" fileFormat="3gp" duration="20">
             <Video codec="h263"
                    bitRate="192000"
@@ -137,20 +124,6 @@
                    bitRate="20000000"
                    width="1920"
                    height="1080"
-                   frameRate="30" />
-
-            <!-- audio setting is ignored -->
-            <Audio codec="aac"
-                   bitRate="156000"
-                   sampleRate="48000"
-                   channels="2" />
-        </EncoderProfile>
-
-        <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="42000000"
-                   width="3840"
-                   height="2160"
                    frameRate="30" />
 
             <!-- audio setting is ignored -->
@@ -288,14 +261,6 @@
          In other words, the applications won't be able to use the codec
          or query the capabilities of the codec at all if it is disabled
     -->
-    <VideoEncoderCap name="h264" enabled="true"
-        minBitRate="64000" maxBitRate="42000000"
-        minFrameWidth="176" maxFrameWidth="3840"
-        minFrameHeight="144" maxFrameHeight="2160"
-        minFrameRate="15" maxFrameRate="120"
-        maxHFRFrameWidth="1920" maxHFRFrameHeight="1080"
-        maxHFRMode="120"  />
-
     <VideoEncoderCap name="h263" enabled="true"
         minBitRate="64000" maxBitRate="2000000"
         minFrameWidth="176" maxFrameWidth="800"
