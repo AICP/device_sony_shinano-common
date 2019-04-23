@@ -50,14 +50,15 @@ ro.rfkilldisabled=1
 ro.qcom.ad=1
 ro.qcom.ad.calib.data=/system/etc/ad_calib.cfg
 
-# Audio config
-ro.qc.sdk.audio.fluencetype=fluence
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.audiorec=true
-persist.audio.fluence.speaker=true
-persist.audio.handset.mic.type=analog
+# Active Noise Cancelling
 persist.audio.anc.enabled=true
+
+# Audio HAL
+persist.vendor.audio.fluence.audiorec=true
+persist.vendor.audio.fluence.speaker=false
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
+ro.vendor.audio.sdk.fluencetype=fluence
 
 # Secure discard
 ro.lockscreen.secdiscard=false
