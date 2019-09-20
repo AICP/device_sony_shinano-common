@@ -138,10 +138,11 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
-    com.android.nfc_extras \
+    com.android.nfc_extras
 
 # NFC treble service
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
     android.hardware.nfc@1.0-service
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.hardware.nfc_nci=pn54x.default
