@@ -137,15 +137,18 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
     NfcNci \
-    com.android.nfc_extras
+    nfc_nci.msm8974
 
 # NFC treble service
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl \
     android.hardware.nfc@1.0-service
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.hardware.nfc_nci=pn54x.default
+PRODUCT_PACKAGES += \
+    libnfc-nci.conf \
+    libnfc-nxp.conf
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/nfcee_access.xml:$(TARGET_COPY_OUT_VENDOR)/etc/nfcee_access.xml \
