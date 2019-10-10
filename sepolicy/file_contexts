@@ -16,7 +16,7 @@
 /dev/brcm_bt_drv                         u:object_r:hci_attach_dev:s0
 
 # Bluetooth
-/system/bin/brcm-uim-sysfs                              u:object_r:brcm_uim_exec:s0
+/system/vendor/bin/brcm-uim-sysfs                       u:object_r:brcm_uim_exec:s0
 
 # WIFI
 /sys/module/bcmdhd/parameters/firmware_path             u:object_r:sysfs_wlan_fwpath:s0
