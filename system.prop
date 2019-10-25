@@ -55,10 +55,10 @@ persist.audio.anc.enabled=true
 
 # Audio HAL
 persist.vendor.audio.fluence.audiorec=true
-persist.vendor.audio.fluence.speaker=false
+persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
-ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.fluencetype=none
 
 # Secure discard
 ro.lockscreen.secdiscard=false
