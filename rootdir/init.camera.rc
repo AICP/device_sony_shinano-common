@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-on init
-
 on early-fs
     wait /dev/block/mmcblk0p1
     class_start trimarea
@@ -88,7 +86,7 @@ service initcredmgr /system/vendor/bin/credmgrfirstboot.sh
 # When credmgrfirstboot is ready it set sys.credmgrdready=true.
 # Start credmgrd after that
 on property:sys.credmgrdready=true
-start credmgrd
+    start credmgrd
 
 # Start Credential manager daemon
 service credmgrd /system/vendor/bin/credmgrd
