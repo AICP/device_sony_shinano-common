@@ -56,10 +56,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
-# Camera (stock .575 blobs)
+# Camera
 PRODUCT_PACKAGES += \
 	tad_static \
-	wait4tad_static 
+	wait4tad_static \
+	libshim_camera
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/vendor/bin/credmgrfirstboot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/credmgrfirstboot.sh
