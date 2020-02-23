@@ -2,21 +2,11 @@
   {
     "repository": "AICP/device_sony_msm8974-common",
     "target_path": "device/sony/msm8974-common",
-    "branch": "p9.0"
-  },
-  {
-    "repository": "AICP/kernel_sony_msm8974",
-    "target_path": "kernel/sony/msm8974",
-    "branch": "p9.0"
-  },
-  {
-    "repository": "LineageOS/android_hardware_broadcom_nfc",
-    "target_path": "hardware/broadcom/nfc",
-    "branch": "lineage-16.0"
+    "branch": "q10.0"
   },
   {
     "repository": "AICP/hardware_broadcom_fm",
     "target_path": "hardware/broadcom/fm",
-    "branch": "p9.0"
+    "branch": "q10.0"
   }
 ]
