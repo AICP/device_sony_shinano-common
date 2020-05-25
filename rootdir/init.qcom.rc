@@ -83,6 +83,8 @@ on early-boot
     # Run pre_hw_config.sh before entering charge only mode.
     exec /system/bin/sh /system/etc/pre_hw_config.sh
 
+    restart qcamerasvr
+
 on boot
     write /sys/module/qpnp_power_on/parameters/forcecrash_on 1
 
