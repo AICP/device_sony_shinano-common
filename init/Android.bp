@@ -13,18 +13,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+
 cc_library_static {
     name: "libinit_shinano",
     recovery_available: true,
     srcs: ["init_shinano.cpp"],
-    whole_static_libs: ["libbase", "libselinux"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init"
     ],
-    cflags: [
-        "-Wall",
-        "-std=gnu++1z",
-    ],
-
 }
