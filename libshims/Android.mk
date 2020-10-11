@@ -15,7 +15,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-
 # libshim_camera
 include $(CLEAR_VARS)
 
@@ -36,6 +35,7 @@ LOCAL_SHARED_LIBRARIES := \
     android.frameworks.bufferhub@1.0 \
     android.hardware.graphics.allocator@2.0 \
     android.hardware.graphics.allocator@3.0 \
+    android.hardware.graphics.allocator@4.0 \
     android.hardware.graphics.common@1.2 \
     android.hardware.graphics.mapper@2.0 \
     android.hardware.graphics.mapper@2.1 \
