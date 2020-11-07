@@ -114,9 +114,10 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-   FMRadio \
-   brcm-uim-sysfs \
-   libfmradio.v4l2-fm
+    FMRadio \
+    brcm-uim-sysfs \
+    libfmradio.v4l2-fm \
+    privapp_whitelist_com.android.fmradio.xml
 
 # IPC Security Config
 PRODUCT_COPY_FILES += \
