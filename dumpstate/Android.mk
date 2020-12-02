@@ -33,4 +33,5 @@ LOCAL_SHARED_LIBRARIES := \
     libutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
+LOCAL_VINTF_FRAGMENTS := android.hardware.dumpstate@1.0.xml
 include $(BUILD_EXECUTABLE)
