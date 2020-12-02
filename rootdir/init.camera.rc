@@ -47,18 +47,18 @@ on post-fs-data
 
     # create directory for scd
     mkdir /dev/socket/scd 0755 system system
-    mkdir /data/scd 0755 system system
+    mkdir /data/scd 0755 system system encryption=None
 
 on post-fs-data
     # SONY: Start early TA-users
-    mkdir /data/etc 0755 root shell
+    mkdir /data/etc 0755 root shell encryption=None
     exec -- /system/vendor/bin/taimport
 
     # SONY: Create dir for Widevine keybox
     mkdir /data/persist/wv 0700 system system
 
     # SONY: Camera
-    mkdir /data/camera 0770 media camera
+    mkdir /data/camera 0770 media camera encryption=None
     chown media camera /sys/devices/sony_camera_0/info
 
     chmod 0660 /sys/devices/sony_camera_0/info
