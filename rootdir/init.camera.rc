@@ -41,6 +41,11 @@ on boot
     chown system camera /sys/class/misc/pm8941-flash/device/vph_pwr_droop
 
 on post-fs-data
+    # Change to socket location on libkeyctrl/suntory for /data encryption
+    # Create suntory data directory
+    mkdir /dev/socket/suntory 0755 system system
+    mkdir /data/suntory 0755 system system encryption=None
+
     # we will remap this as /mnt/sdcard with the sdcard fuse tool
     mkdir /data/misc/camera 0770 media camera
     mkdir /data/misc/cameraserver 0700 cameraserver cameraserver
@@ -94,6 +99,13 @@ service credmgrd /system/vendor/bin/credmgrd
     group system camera media
     socket credmgr stream 0660 system camera
     disabled
+
+# Start suntrold
+service suntrold /system/vendor/bin/suntrold
+    class main
+    user system
+    group system camera
+    oneshot
 
 # Secure Config Transfer service
 service sct_service /system/vendor/bin/sct_service

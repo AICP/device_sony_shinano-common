@@ -248,11 +248,6 @@ on boot
     chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
 
 on post-fs
-    # Change to socket location on libkeyctrl/suntory for /data encryption
-    # Create suntory data directory
-    mkdir /dev/socket/suntory 0755 system system
-    mkdir /data/suntory 0755 system system encryption=None
-
     # led RGB
     chown system system /sys/class/leds/rgb/sync_state
     chown system system /sys/class/leds/rgb/start_blink
@@ -431,13 +426,6 @@ service ril-daemon2 /system/vendor/bin/hw/rild -c 2
 
 on property:persist.radio.multisim.config=dsds
     start ril-daemon2
-
-# Start suntrold
-service suntrold /system/vendor/bin/suntrold
-    user system
-    group system camera
-    oneshot
-    class main
 
 # Modem Log QMI service
 service mlog_qmi_service /system/vendor/bin/mlog_qmi_service
