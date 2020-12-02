@@ -79,6 +79,7 @@ service taimport /system/vendor/bin/taimport
     class late_start
     user root
     group system
+    seclabel u:r:taimport:s0
     oneshot
 
 # This script init /cache/CredentialManagerData if /data/credmgr doesn't meet our requirements
@@ -86,6 +87,7 @@ service initcredmgr /system/vendor/bin/credmgrfirstboot.sh
     class late_start
     user root
     group root
+    seclabel u:r:credmgrd:s0
     oneshot
 
 # When credmgrfirstboot is ready it set sys.credmgrdready=true.
@@ -98,6 +100,7 @@ service credmgrd /system/vendor/bin/credmgrd
     user system
     group system camera media
     socket credmgr stream 0660 system camera
+    seclabel u:r:credmgrd:s0
     disabled
 
 # Start suntrold
@@ -110,23 +113,27 @@ service suntrold /system/vendor/bin/suntrold
 # Secure Config Transfer service
 service sct_service /system/vendor/bin/sct_service
     user root
+    seclabel u:r:sct:s0
     disabled
  
 # Trim Area QMI service
 service ta_qmi_service /system/vendor/bin/ta_qmi_service
     user system
     group system root net_raw wakelock
+    seclabel u:r:ta_qmi:s0
     disabled
 
 service scd /system/bin/scd
     class late_start
     user system
     group system
+    seclabel u:r:scd:s0
 
 #service wvkbd_installer /system/bin/logwrapper /system/vendor/bin/wvkbd
 service wvkbd_installer /system/vendor/bin/wvkbd
     user system
     group system
+    seclabel u:r:wv:s0
     oneshot
     disabled
 
@@ -141,7 +148,7 @@ service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera media system inet input graphics
-#    seclabel u:r:mm-qcamerad:s0
+    seclabel u:r:mm-qcamerad:s0
 
 # SONY: TrimArea Daemon
 # Last 2 args: start block(blk size 128k), number of blocks(partitionsize(kb)/128(kb))
@@ -150,9 +157,11 @@ service tad_static /vendor/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
     user system
     group system root camera media
     socket tad stream 0770 system system
+    seclabel u:r:tad:s0
 
 service updatemiscta /system/vendor/bin/updatemiscta
     class main
     user system
     group system
+    seclabel u:r:updatemiscta:s0
     oneshot
