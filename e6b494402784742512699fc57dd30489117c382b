@@ -70,6 +70,24 @@
       "parentUuid": "2c58b319_74c587d4",
       "revId": "e6b494402784742512699fc57dd30489117c382b",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45220ba0_2e8a4b60",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1331
+      },
+      "writtenOn": "2020-12-06T17:28:07Z",
+      "side": 1,
+      "message": "Yes, I think that would be the best.",
+      "parentUuid": "d78626c0_2b9f391a",
+      "revId": "e6b494402784742512699fc57dd30489117c382b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
