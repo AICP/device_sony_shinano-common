@@ -52,6 +52,24 @@
       "parentUuid": "a64a6bbb_ccc756d7",
       "revId": "e6b494402784742512699fc57dd30489117c382b",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d78626c0_2b9f391a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 562
+      },
+      "writtenOn": "2020-12-06T17:24:59Z",
+      "side": 1,
+      "message": "Thanks for testing!\nShould I abandon this and re-push to msm8974-common?",
+      "parentUuid": "2c58b319_74c587d4",
+      "revId": "e6b494402784742512699fc57dd30489117c382b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
