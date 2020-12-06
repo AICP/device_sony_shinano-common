@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bd73652_4e9c7c4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1331
+      },
+      "writtenOn": "2020-12-06T15:34:36Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it make sense to do this in 8974-common?",
+      "revId": "e6b494402784742512699fc57dd30489117c382b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
