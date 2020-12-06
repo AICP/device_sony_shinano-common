@@ -16,6 +16,24 @@
       "message": "Wouldn\u0027t it make sense to do this in 8974-common?",
       "revId": "bebf4fd38b8c320f0c9cbbb22eea1daceef18f42",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db5163b4_2f37a718",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 562
+      },
+      "writtenOn": "2020-12-06T16:24:42Z",
+      "side": 1,
+      "message": "I wonder if it\u0027s needed for rhine platform.\nWould you check this?",
+      "parentUuid": "42a13e27_5bcb988a",
+      "revId": "bebf4fd38b8c320f0c9cbbb22eea1daceef18f42",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
